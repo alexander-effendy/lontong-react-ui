@@ -1,13 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
 
-import Home from './screens/Home';
+import Main from './screens/Main';
 import About from './screens/About';
 
 const Pages = () => {
   return (
-  <div>
+  <div className="bg-[#f3f2ee]">
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Main />} />
       <Route path="/about" element={<About />} />
     </Routes>
   </div>
