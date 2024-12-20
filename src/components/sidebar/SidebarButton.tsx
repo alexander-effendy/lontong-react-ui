@@ -11,9 +11,8 @@ const SidebarButton: React.FC<SidebarButtonProps>  = ({ className, navigationTo,
   const navigate = useNavigate();
   return (
     <div 
-      className={`${className} group transition-color duration-500 hover:cursor-pointer hover:bg-black rounded-[300px] size-[45px] mx-auto bg-white flex items-center justify-center`}
+      className={`${className} ${navigationTo === 'settings' && 'hover:rotate-180'} group transition-color duration-[1000ms] hover:cursor-pointer hover:bg-black rounded-[300px] size-[45px] mx-auto bg-white flex items-center justify-center`}
       onClick={() => navigate(`${navigationTo}`)}
-      
     >
       <div className="group-hover:text-white">{children}</div>
     </div>

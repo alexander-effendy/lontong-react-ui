@@ -15,8 +15,8 @@ const Info = () => {
       <section className="flex flex-col items-center pt-[40px] p-[20px] gap-[10px] flex-none">
         <img src={Celine} className="size-[80px] rounded-full"/>
         <span className="font-semibold text-[20px]">Natasha Ann</span>
-        <button className="flex bg-white w-[100%] px-[20px] rounded-[30px] h-[60px] mt-[20px] items-center justify-between">
-          <section className="flex gap-2 items-center">
+        <button className="flex bg-white hover:bg-gray-100 transition-color hover:shadow-xl duration-500 w-[100%] px-[20px] rounded-[30px] h-[60px] mt-[20px] items-center justify-between">
+          <section className="flex gap-2 items-center ">
             <CgProfile className="size-[30px] mr-[10px]" />
             <span className="font-semibold">2 <span className="ml-[5px]">friends</span></span>
           </section>

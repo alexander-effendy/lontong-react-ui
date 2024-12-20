@@ -11,6 +11,7 @@ import { MdOutlineLocalPostOffice } from "react-icons/md";
 import { IoSettingsOutline } from "react-icons/io5";
 
 import Celine from "@/assets/images/celine.png";
+import { Navigate } from "react-router-dom";
 
 const Sidebar =  () => {
   return (
@@ -18,7 +19,18 @@ const Sidebar =  () => {
 
       {/* one */}
       <section className="w-full rounded-[15px] overflow-hidden mt-[10px]">
-        <Lottie className="size-[75px] mx-auto hover:cursor-help" animationData={Panda} loop={true} />
+      <a
+        href="https://alexandereffendy.com/bouldering"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block w-full"
+      >
+        <Lottie
+          animationData={Panda}
+          loop={true}
+          className="hover:cursor-help"
+        />
+      </a>
         <SidebarButton className="mt-[20px]" navigationTo="calendar">
           <IoCalendarOutline className="text-xl" />
         </SidebarButton>
@@ -53,7 +65,7 @@ const Sidebar =  () => {
       <section className="flex flex-col">
         <SidebarButton
           className="mt-[20px]"
-          navigationTo="calendar"
+          navigationTo="settings"
         >
           <IoSettingsOutline className="text-xl" />
         </SidebarButton>
