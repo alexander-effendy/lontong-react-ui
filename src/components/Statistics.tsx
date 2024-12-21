@@ -45,7 +45,7 @@ const Statistics = () => {
         display: true,
         text: "David's Climbing Progress (2024)" as const,
         font: {
-          size: "16px"
+          size: 16
         }
       },
     },
@@ -55,14 +55,14 @@ const Statistics = () => {
           display: true,
           text: "Grade (V0 - V10)" as const, // Label for Y-axis
           font: {
-            size: "14px"
+            size: 14
           }
         },
         ticks: {
           stepSize: 1, // Increment by 1 grade level
-          callback: (value: number) => `V${value}`, // Show "V" prefix
+          callback: (value: string | number) => `V${value}`, // Show "V" prefix
           font: {
-            size: "14px",
+            size: 14,
           },
         },
         min: 0, // Minimum grade
@@ -73,12 +73,12 @@ const Statistics = () => {
           display: true,
           text: "Months" as const, // Label for X-axis
           font: {
-            size: "14px",
+            size: 14,
           },
         },
         ticks: {
           font: {
-            size: "14px", // X-axis tick label text size
+            size: 14, // X-axis tick label text size
           },
         },
       },
@@ -86,11 +86,14 @@ const Statistics = () => {
   };
 
   return (
-    <section className="w-full h-full rounded-[20px] p-5 justify-center bg-white">
-      <Line data={data} options={options} />
-      <section className="flex">
-        <Ascents />
+    <section className="flex-1 min-w-0 rounded-[20px] p-5 justify-center bg-white shrink-1">
+      <section className="w-3/4">
+        <Line data={data} options={options} />
+
       </section>
+      {/* <section className="flex">
+        <Ascents />
+      </section> */}
     </section>
   );
 };

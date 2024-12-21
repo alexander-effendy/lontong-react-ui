@@ -18,7 +18,7 @@ const Main = () => {
           Go to about
         </button> */}
         <Sidebar />
-        <section className="fixed gap-[20px] left-[140px] top-[20px] w-[calc(100vw-160px)] h-[calc(100vh-40px)] right-[20px] flex">
+        <section className="fixed gap-[20px] left-[140px] top-[20px] h-[calc(100vh-40px)] right-[20px] flex">
           <Statistics />
           <Info />
         </section>
